@@ -1,0 +1,17 @@
+
+  19/08/2020   16:02.44   /home/mobaxterm/week1  echo -e "#include <stdio.h>\nint main(){\n  printf(\"Hello world\");\n  return 0;\n}" > ~/week1/ex4.c
+                                                                                                                                                             ✔
+
+  19/08/2020   16:03.07   /home/mobaxterm/week1  ls
+ex1.txt  ex2.txt  ex3.sh   ex4.c
+                                                                                                                                                             ✔
+
+  19/08/2020   16:51.36   /home/mobaxterm/week1  gcc -o ~/week1/ex4 ~/week1/ex4.c
+                                                                                                                                                             ✔
+
+  19/08/2020   16:51.54   /home/mobaxterm/week1  ls
+ex1.txt  ex2.txt  ex3.sh   ex4.c    ex4.exe
+                                                                                                                                                                                                                                                                                                                        ✘
+
+  19/08/2020   17:19.37   /home/mobaxterm/week1  ./ex4.exe
+Hello world 
