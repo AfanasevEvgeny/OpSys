@@ -1,0 +1,7 @@
+
+  19/08/2020   15:44.48   /home/mobaxterm/week1  echo -e "date\nsleep 3\ndate" > ~/week1/ex3.sh
+                                                                                                                                                             ✔
+
+  19/08/2020   15:51.09   /home/mobaxterm/week1  bash ex3.sh
+Wed Aug 19 15:51:37 RTZ 2020
+Wed Aug 19 15:51:41 RTZ 2020
