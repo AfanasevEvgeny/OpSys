@@ -1,0 +1,13 @@
+
+  19/08/2020   14:22.01   /home/mobaxterm  ls/usr/bin | grep gcc | sort -r >~ /week1/ex1.txt
+bash: ls/usr/bin: No such file or directory
+bash: /home/mobaxterm: Is a directory
+                                                                                                                                                             ✘
+
+  19/08/2020   14:23.53   /home/mobaxterm  ls /usr/bin | grep gcc | sort -r > ~/week1/ex1.txt
+                                                                                                                                                             ✔
+
+  19/08/2020   14:24.43   /home/mobaxterm  head <~/week1/ex1.txt
+libgcc_s_dw2-1.dll
+cyggcc_s-1.dll
+                                                                                                                                                             ✔
