@@ -10,9 +10,13 @@ int main() {
     else printf("Hello from parent [%d - %d]\n", pid, n);
   return 0;
 }
-
-
-
+Shell script
+for f in {1..10}
+    do
+    ./a.exe
+    done
+Result
+Output parents and children were mixed because they were executed on different cores
   09/09/2020   15:57.33  bash ex1.sh
 Hello from child [1008 - 6475108]
 Hello from parent [1007 - 6475108]
