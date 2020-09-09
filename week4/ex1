@@ -1,0 +1,38 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <sys/types.h>
+
+int main() {
+  int n;
+  pid_t f_pid = fork();
+  pid_t pid = getpid();
+  if (f_pid == 0) printf("Hello from child [%d - %d]\n", pid, n);
+    else printf("Hello from parent [%d - %d]\n", pid, n);
+  return 0;
+}
+
+
+
+  09/09/2020   15:57.33  bash ex1.sh
+Hello from child [1008 - 6475108]
+Hello from parent [1007 - 6475108]
+Hello from child [1010 - 6475108]
+Hello from parent [1009 - 6475108]
+Hello from child [1012 - 6475108]
+Hello from parent [1011 - 6475108]
+Hello from child [1014 - 6475108]
+Hello from parent [1013 - 6475108]
+Hello from child [1016 - 6475108]
+Hello from parent [1015 - 6475108]
+Hello from child [1018 - 6475108]
+Hello from parent [1017 - 6475108]
+Hello from parent [1019 - 6475108]
+Hello from child [1020 - 6475108]
+Hello from child [1022 - 6475108]
+Hello from parent [1021 - 6475108]
+Hello from parent [1023 - 6475108]
+Hello from child [1024 - 6475108]
+Hello from child [1026 - 6475108]
+Hello from parent [1025 - 6475108]
+                                   
+                                                                               ✔
