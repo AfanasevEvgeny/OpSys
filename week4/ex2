@@ -17,4 +17,4 @@ for 3forks 8 processes are created:
 │           ├─ex2───ex2
 │
 
-the tree for 5 repetitions will contain 32 processes
+the tree for 5 repetitions will contain 32 processes where  new process becomes a child of the old process.
