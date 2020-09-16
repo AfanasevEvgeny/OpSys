@@ -1,0 +1,29 @@
+#include <pthread.h>
+#include <stdio.h>
+
+int t=1;
+void *show_thread(void *vargp)
+{
+    printf("msg from thread №%d\n",t);
+    t++;
+    return NULL;
+}
+int main(){
+    pthread_t t_id;
+    for (int i=1;i<=3;i++){
+        printf("thread #%d created\n",i);
+        pthread_create(&t_id,NULL,&show_thread,NULL);
+        pthread_join(t_id,NULL);
+    }
+    pthread_exit(NULL);
+    return 0;
+}
+
+
+output:
+thread #1 created                                                                                                                             
+msg from thread №1                                                                                                                            
+thread #2 created                                                                                                                             
+msg from thread №2                                                                                                                            
+thread #3 created                                                                                                                             
+msg from thread №3
