@@ -64,7 +64,7 @@ void main()
 }
 printf("\n The average Waiting Time=%f",awt);
 printf("\n The average Turnaround Time=%f",atat);
-getch();
+return 0;;
 }
  result:
   23/09/2020   18:37.10   /drives/c/Users/Evgeny/Desktop/os/lab/week6  ./a.exe
