@@ -1,0 +1,86 @@
+C programm:
+#include <stdio.h>
+void FindWaitingTime(int processes[],int n,int wt[], int bt[],int at[]){
+    wt[0]=0;
+    int allprev[n];
+    allprev[0]=0;
+
+    for (int i = 1;i<n;i++){
+        allprev[i]= allprev[i-1]+ bt[i-1];
+        wt[i]=allprev[i]-at[i];
+        if (wt<0)wt=0;
+    }
+}
+//Turnaround time (TAT) is the time interval from the time of 
+//submission of a process to the time of the completion of the process.
+void findTAT(int processes[],int n,int wt[], int bt[], int TAT[]){
+    for (int i = 0;i<n;i++){
+        TAT[i]=wt[i]+bt[i];
+    }
+}
+int main(){
+    int n;
+    printf("number of processes:\n");
+    scanf("%d", &n);  
+    int processes[n];
+    int at[n];
+    printf("arrival time of each process:");
+    for(int i = 0; i < n; ++i) {
+     scanf("%d", &at[i]);
+  }
+    int bt[n];
+    printf("burst time of each process:");
+    for(int i = 0; i < n; ++i) {
+     scanf("%d", &bt[i]);
+  }
+    int total_wt=0,total_tat=0,avg_wt=0,avg_tat=0;
+   
+    
+    int CT[n]; 
+    int wt[n];               
+    int TAT[n];         
+    FindWaitingTime(processes,n,wt,bt,at);
+    findTAT(processes,n,wt,bt,TAT);
+
+    //now we find average times and CT(completion time)
+    for (int i =0;i<n;i++){
+        total_wt = total_wt + wt[i];  
+        total_tat = total_tat + TAT[i];  
+        CT[i] = TAT[i] + at[i];
+    }
+    avg_wt=(float)total_wt/(float)n;
+    avg_tat=(float)total_tat/(float)n;
+
+    //output
+     printf("Processes   Completion time   Waiting time   Turn around time\n");
+     for (int i=0;i<n;i++){
+        printf("   %d ",(i+1)); 
+        printf("       %d ", CT[i] ); 
+        printf("              %d",wt[i] ); 
+        printf("                     %d\n",TAT[i] );  
+     }
+
+    printf("Average waiting time = %d",avg_wt); 
+    printf("\n"); 
+    printf("Average turn around time = %d ",avg_tat);  
+
+    return 0;
+}
+eexample of the result:
+number of processes:
+4
+arrival time of each process:0
+2
+4
+9
+burst time of each process:3
+5
+5
+5
+Processes   Completion time   Waiting time   Turn around time
+   1        3               0                     3
+   2        8               1                     6
+   3        13               4                     9
+   4        18               4                     9
+Average waiting time = 2
+Average turn around time = 6   
