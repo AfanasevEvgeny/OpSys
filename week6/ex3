@@ -66,17 +66,3 @@ printf("\n The average Waiting Time=%f",awt);
 printf("\n The average Turnaround Time=%f",atat);
 return 0;;
 }
- result:
-  23/09/2020   18:37.10   /drives/c/Users/Evgeny/Desktop/os/lab/week6  ./a.exe
-number of process:
-3
-burst times:
-1
-2
-3
-Process    Burst Time    Waiting Time  Completion Time    Turnaround Time
-   1        1               0              1                 1
-   2        2               1              3                 3
-   3        3               3              6                 6
-
-Average waiting time=1Average turnaround time=3        
