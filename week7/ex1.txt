@@ -1,0 +1,4 @@
+
+  30/09/2020   11:27.49   /drives/c/Users/Evgeny/Desktop/os/lab/week6  size a.exe
+   text    data     bss     dec     hex filename
+   4741    1928     260    6929    1b11 a.exe
