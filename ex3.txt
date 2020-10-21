@@ -1,0 +1,15 @@
+  21/10/2020   21:07.10   /drives/c/Users/Evgeny/Desktop/os/lab/week10  chmod -x _ex3.txt
+                                                                                                                                                             ✔
+
+  21/10/2020   21:07.21   /drives/c/Users/Evgeny/Desktop/os/lab/week10  chmod u=rwx _ex3.txt
+                                                                                                                                                             ✔
+
+  21/10/2020   21:07.39   /drives/c/Users/Evgeny/Desktop/os/lab/week10  chmod o=rwx _ex3.txt
+                                                                                                                                                             ✔
+
+  21/10/2020   21:07.56   /drives/c/Users/Evgeny/Desktop/os/lab/week10  chmod g=rwx _ex3.txt
+
+
+660 : group and owner can RW, others can't anything.
+775 : that owner and group can do RWX, others can only RX.
+777 : every user can do RWX.
