@@ -1,0 +1,8 @@
+ find .  -inum 45317471250438739
+./week2/file.txt
+./week10/_ex2.txt
+
+then run:
+find .. -inum 45317471250438739 -exec rm {} \
+
+result: none
